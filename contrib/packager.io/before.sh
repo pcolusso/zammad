@@ -11,3 +11,5 @@ cat Gemfile.lock
 
 # cleanup
 script/build/cleanup.sh
+
+ldconfig

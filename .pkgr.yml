@@ -50,8 +50,8 @@ targets:
       - elasticsearch
       - nginx
       - postgresql-server
-      - libImlib2-1
-      - libImlib2-1-devel
+      - imlib2
+      - imlib2-devel
 before:
   - contrib/packager.io/before.sh
 after:
