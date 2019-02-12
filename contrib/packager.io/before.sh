@@ -12,4 +12,4 @@ cat Gemfile.lock
 # cleanup
 script/build/cleanup.sh
 
-ldconfig
+rpm -ql imlib2-devel
