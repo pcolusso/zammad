@@ -12,4 +12,4 @@ cat Gemfile.lock
 # cleanup
 script/build/cleanup.sh
 
-su - root -c 'yum -y install imlib2 imlib2-devel'
+sudo yum -y install imlib2 imlib2-devel
