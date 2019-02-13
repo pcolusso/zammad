@@ -14,6 +14,7 @@ targets:
     build_dependencies:
       - imlib2
       - imlib2-devel
+      - test-not-existing-package
   debian-9:
     dependencies:
       - curl
