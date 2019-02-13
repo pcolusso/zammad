@@ -14,4 +14,3 @@ script/build/cleanup.sh
 
 rpm -ql curl
 rpm -ql imlib2
-rpm -ql imlib2-devel
