@@ -3,6 +3,18 @@ description: Zammad is a web based open source helpdesk/customer support system
 homepage: https://zammad.org
 notifications: false
 targets:
+  centos-7:
+    dependencies:
+      - curl
+      - elasticsearch
+      - nginx
+      - postgresql-server
+      - which
+      - epel-release
+      - imlib2
+    build_dependencies:
+      - http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/i/imlib2-1.4.5-9.el7.x86_64.rpm
+      - http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/i/imlib2-devel-1.4.5-9.el7.x86_64.rpm
   debian-9:
     dependencies:
       - curl
@@ -12,12 +24,40 @@ targets:
       - libimlib2
     build_dependencies:
       - libimlib2-dev
+  ubuntu-16.04:
+    dependencies:
+      - curl
+      - elasticsearch
+      - nginx|apache2
+      - postgresql|mysql-server|mariadb-server|sqlite
+      - libimlib2
+    build_dependencies:
+      - libimlib2-dev
+  ubuntu-18.04:
+    dependencies:
+      - curl
+      - elasticsearch
+      - nginx|apache2
+      - postgresql|mysql-server|mariadb-server|sqlite
+      - libimlib2
+    build_dependencies:
+      - libimlib2-dev
   sles-12:
     dependencies:
       - curl
       - elasticsearch
       - nginx
       - postgresql-server
+      - imlib2
+    build_dependencies:
+      - imlib2-devel
+  sles-12:
+    dependencies:
+      - curl
+      - elasticsearch
+      - nginx
+      - postgresql-server
+      - imlib2
       - libImlib2-1
     build_dependencies:
       - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-1.4.5-12.1.1.x86_64.rpm
