@@ -11,6 +11,7 @@ targets:
       - postgresql-server
       - which
       - imlib2
+    build_dependencies:
       - imlib2-devel
   debian-8:
     dependencies:
@@ -19,6 +20,7 @@ targets:
       - nginx|apache2
       - postgresql|mysql-server|mariadb-server|sqlite
       - libimlib2
+    build_dependencies:
       - libimlib2-dev
   debian-9:
     dependencies:
@@ -27,6 +29,7 @@ targets:
       - nginx|apache2
       - postgresql|mariadb-server|sqlite
       - libimlib2
+    build_dependencies:
       - libimlib2-dev
   ubuntu-16.04:
     dependencies:
@@ -35,6 +38,7 @@ targets:
       - nginx|apache2
       - postgresql|mysql-server|mariadb-server|sqlite
       - libimlib2
+    build_dependencies:
       - libimlib2-dev
   ubuntu-18.04:
     dependencies:
@@ -43,6 +47,7 @@ targets:
       - nginx|apache2
       - postgresql|mysql-server|mariadb-server|sqlite
       - libimlib2
+    build_dependencies:
       - libimlib2-dev
   sles-12:
     dependencies:
