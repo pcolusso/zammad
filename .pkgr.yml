@@ -26,6 +26,15 @@ targets:
       - libimlib2
     build_dependencies:
       - libimlib2-dev
+  sles-12:
+    dependencies:
+      - curl
+      - elasticsearch
+      - nginx
+      - postgresql-server
+      - imlib2
+    build_dependencies:
+      - imlib2-devel
 before:
   - contrib/packager.io/before.sh
 after:

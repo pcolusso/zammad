@@ -13,6 +13,5 @@ cat Gemfile.lock
 script/build/cleanup.sh
 
 rpm -ql curl
-rpm -ql epel-release
 rpm -ql imlib2
 rpm -ql imlib2-devel
