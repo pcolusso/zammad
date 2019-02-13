@@ -12,5 +12,5 @@ cat Gemfile.lock
 # cleanup
 script/build/cleanup.sh
 
-rpm -ql mysql-devel
+rpm -ql curl
 rpm -ql imlib2-devel
