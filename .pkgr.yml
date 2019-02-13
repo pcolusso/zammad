@@ -20,6 +20,10 @@ targets:
       - postgresql-server
       - libImlib2-1
     build_dependencies:
+      - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-1.4.5-12.1.1.x86_64.rpm
+      - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-devel-1.4.5-12.1.1.x86_64.rpm
+      - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-filters-1.4.5-12.1.1.x86_64.rpm
+      - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-loaders-1.4.5-12.1.1.x86_64.rpm
       - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/libImlib2-1-1.4.5-12.1.1.x86_64.rpm
 before:
   - contrib/packager.io/before.sh
