@@ -12,7 +12,7 @@ targets:
       - which
       - imlib2
     build_dependencies:
-      - imlib2-devel
+      - http://springdale.math.ias.edu/data/puias/7/x86_64/os/Addons/Packages/imlib2-devel-1.4.5-9.sdl7.x86_64.rpm
   debian-8:
     dependencies:
       - curl
@@ -56,6 +56,7 @@ targets:
       - nginx
       - postgresql-server
       - imlib2
+    build_dependencies:
       - imlib2-devel
 before:
   - contrib/packager.io/before.sh
