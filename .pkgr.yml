@@ -34,7 +34,7 @@ targets:
       - postgresql-server
       - imlib2
     build_dependencies:
-      - imlib2-devel
+      - imlib2
 before:
   - contrib/packager.io/before.sh
 after:
