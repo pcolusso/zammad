@@ -33,7 +33,6 @@ targets:
       - postgresql-server
       - imlib2
     build_dependencies:
-      - imlib2
       - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-1.4.5-12.1.1.x86_64.rpm
       - https://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/12.3/repo/oss/suse/x86_64/imlib2-devel-1.4.5-12.1.1.x86_64.rpm
 before:
