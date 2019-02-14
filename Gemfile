@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 # core - base
-ruby '2.5.3 '
+ruby '2.6'
 gem 'rails', '5.1.5'
+
+gem 'foreman'
 
 # core - rails additions
 gem 'activerecord-session_store'
@@ -12,7 +14,6 @@ gem 'rails-observers'
 
 # core - application servers
 gem 'puma', group: :puma
-gem 'unicorn', group: :unicorn
 
 # core - supported ORMs
 gem 'activerecord-nulldb-adapter', group: :nulldb

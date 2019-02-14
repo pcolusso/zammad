@@ -1,7 +1,7 @@
-FROM ruby:2.5
+FROM ruby:2.6.0
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends nodejs vim optipng jpegoptim libxml2-dev libcurl4-openssl-dev cron \
+    && apt-get install -y --no-install-recommends ca-certificates nodejs vim optipng jpegoptim libxml2-dev libcurl4-openssl-dev cron \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo "Australia/Sydney" > /etc/timezone \
@@ -13,8 +13,12 @@ WORKDIR /opt/zammad
 
 COPY Gemfile .
 
+ENV RAILS_ENV production
+
 RUN bundle install 
 
-RUN RAILS_ENV=production bundle exec rails assets:precompile
+COPY . .
+
+#RUN bundle exec rails assets:precompile
 
 CMD ['foreman', 'start']
