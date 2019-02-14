@@ -11,9 +11,9 @@ RUN echo "Australia/Sydney" > /etc/timezone \
 RUN mkdir -p /opt/zammad
 WORKDIR /opt/zammad
 
-COPY Gemfile* .
+COPY Gemfile .
 
-RUN bundle install --without test development postgres
+RUN bundle install 
 
 RUN RAILS_ENV=production bundle exec rails assets:precompile
 
