@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # core - base
-ruby '2.6'
+#ruby '2.6'
 gem 'rails', '5.1.5'
 
 gem 'foreman'
