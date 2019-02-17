@@ -1,10 +1,8 @@
-FROM ruby:2.5
+FROM ruby:2.4.4
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates nodejs vim optipng jpegoptim libxml2-dev libcurl4-openssl-dev cron \
     && rm -rf /var/lib/apt/lists/*
-
-RUN update-ca-certificates
 
 RUN echo "Australia/Sydney" > /etc/timezone \
     && ln -fs /usr/share/zoneinfo/Australia/Sydney /etc/localtime \
@@ -21,6 +19,6 @@ RUN bundle install
 
 COPY . .
 
-#RUN bundle exec rails assets:precompile
+RUN DB_ADAPTER=nulldb bundle exec rails assets:precompile
 
 CMD ['foreman', 'start']

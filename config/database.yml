@@ -3,12 +3,12 @@
 
 default: &default
 default: &default
-  adapter: postgresql
+  adapter: <%= ENV["DB_ADAPTER"] ||= "postgresql" %>
   encoding: unicode
-  host: <%= ENV.fetch("DATABASE_HOST") %>
-  port: <%= ENV.fetch("DATABASE_PORT")  %>
-  username: <%= ENV.fetch("DATABASE_USER") %>
-  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  host: <%= ENV["DATABASE_HOST"] || "localhost" %>
+  port: <%= ENV["DATABASE_PORT"] || 5432 %>
+  username: <%= ENV["DATABASE_USER"] || "zammad" %>
+  password: <%= ENV["DATABASE_PASSWORD"] || "zammad" %>
   pool: 50
 
   #### mysql config #####
